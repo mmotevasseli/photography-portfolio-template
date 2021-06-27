@@ -30,6 +30,7 @@ html {
     --special-color: #906272;
     --background-color: #414141;
     --gray-text: #525252;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -91,6 +92,9 @@ h1 {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 2;
+    position: sticky;
+    top: 0px;
+    background: #ffffff;
 }
 
 nav {
@@ -424,39 +428,27 @@ nav {
         padding: 5rem 0rem;
     }
 
-    .menu-check {
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 4%;
-        transform: translate(-5%, -50%);
-        width: 5rem;
-        height: 5rem;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 100;
-    }
+    
 
-    .menu-check:checked+.nav-links {
+    .nav-open {
         transform: translateX(-100%);
     }
 
-    .menu-check:checked~.burger span {
+    .toggle .line-1{
+        transform: rotateZ(45deg) translateY(300%);
         background: white;
     }
 
-    .menu-check:checked~.burger span:nth-child(1) {
-        transform: rotateZ(45deg) translateY(300%);
-
-    }
-
-    .menu-check:checked~.burger span:nth-child(2) {
+    .toggle .line-2 {
         opacity: 0;
     }
 
-    .menu-check:checked~.burger span:nth-child(3) {
+    .toggle .line-3{
         transform: rotateZ(-45deg) translateY(-300%);
+        background: white;
     }
+
+
 
     /* About Section */
 
